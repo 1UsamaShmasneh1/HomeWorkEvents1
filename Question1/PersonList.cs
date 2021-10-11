@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace Question1
 {
-    public class Program
+    public class PersonList
     {
-        public static void Main(string[] args)
+        static List<Person> personList = new List<Person>();
+
+        public static void Add(Person person)
         {
-            
+            personList.Add(person);
         }
     }
 }

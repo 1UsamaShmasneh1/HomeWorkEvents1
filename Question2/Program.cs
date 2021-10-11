@@ -18,10 +18,10 @@ namespace Question2
             {
                 num = Convert.ToInt32(Console.ReadLine());
                 someClass.Num = Convert.ToInt32(Console.ReadLine());
-                if (num == 999 || someClass.Num == 999)
+                if (num == 999 )
                 {
                     luckyNumber();
-                    break;
+                    someClass.LuckyNumber += Print;
                 }                    
             }
         }

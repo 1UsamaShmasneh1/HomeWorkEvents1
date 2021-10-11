@@ -8,7 +8,24 @@ namespace Question2
 {
     public class SomeClass
     {
-        public int Num {  get; set; }
+        public event LuckyNumberWasEnteredDelegate LuckyNumber;
+        public int Num
+        {
+            get
+            {
+                return Num;
+            }
+            set
+            {
+                Num = value;
 
+            }
+        }
+        protected void OnLockyNumber()
+        {
+            if (Num == 999)
+                if (LuckyNumber != null)
+                    LuckyNumber();
+        }
     }
 }
