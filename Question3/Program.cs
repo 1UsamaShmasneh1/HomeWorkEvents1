@@ -11,14 +11,7 @@ namespace Question3
         public static event DiscountDelegate Discount;
         public static void Main(string[] args)
         {
-            Discount = Events.GetDiscount;
-            Student student = new Student();
-            StudentList.students.Add(student);
-            if(StudentList.students.Count > 0 && StudentList.students.Count % 5 == 0)
-            {
-                student.Discount = 5;
-                Discount();
-            }
+            
         }
     }
 }

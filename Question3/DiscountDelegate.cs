@@ -6,5 +6,5 @@ using System.Threading.Tasks;
 
 namespace Question3
 {
-    public delegate void DiscountDelegate();
+    public delegate void DiscountDelegate(Student student);
 }
