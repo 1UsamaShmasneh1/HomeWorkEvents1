@@ -6,9 +6,5 @@ using System.Threading.Tasks;
 
 namespace Question4
 {
-    public abstract class Shape
-    {
-        public abstract event Outch OutchEvent;
-        public abstract void OnOutch();
-    }
+    public delegate void Outch();
 }
