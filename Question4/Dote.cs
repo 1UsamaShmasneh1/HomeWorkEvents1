@@ -18,8 +18,9 @@ namespace Question4
         }
         public override void OnOutch()
         {
-            if (OutchEvent != null)
-                OutchEvent();
+            //if (this.X == Shape.X && dote.Y == square.Y)
+                if (OutchEvent != null)
+                    OutchEvent();
         }
 
     }

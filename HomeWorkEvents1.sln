@@ -3,19 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31710.8
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Question1", "Question1\Question1.csproj", "{F9752272-4C5D-4656-BD9C-2BF9356A25FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Question1", "Question1\Question1.csproj", "{F9752272-4C5D-4656-BD9C-2BF9356A25FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Question2", "Question2\Question2.csproj", "{FAE126E0-A3D3-431A-94E8-9B7F8BB0E57F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Question2", "Question2\Question2.csproj", "{FAE126E0-A3D3-431A-94E8-9B7F8BB0E57F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Question3", "Question3\Question3.csproj", "{1C706253-D89B-4B33-815F-4FD48EF225B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Question3", "Question3\Question3.csproj", "{1C706253-D89B-4B33-815F-4FD48EF225B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Question4", "Question4\Question4.csproj", "{4511184F-CB04-4F1F-A5A0-37B844D347EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Question4", "Question4\Question4.csproj", "{4511184F-CB04-4F1F-A5A0-37B844D347EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Question1.1", "Question1.1\Question1.1.csproj", "{E0D909E3-1713-4753-B6FE-4EDEDD4F69CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Question1.1", "Question1.1\Question1.1.csproj", "{E0D909E3-1713-4753-B6FE-4EDEDD4F69CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Question3.1", "Question3.1\Question3.1.csproj", "{BD64B927-224E-404A-9CB6-6C2B3ABA9EFF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Question3.1", "Question3.1\Question3.1.csproj", "{BD64B927-224E-404A-9CB6-6C2B3ABA9EFF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Question4.1", "Question4.1\Question4.1.csproj", "{46F98BFD-6347-47D4-B67D-959E69128E2A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Question4.1", "Question4.1\Question4.1.csproj", "{46F98BFD-6347-47D4-B67D-959E69128E2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Question5and6", "Question5and6\Question5and6.csproj", "{086B8A53-3756-4321-9EEF-2313415B3F1D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Question5and6.1", "Question5and6.1\Question5and6.1.csproj", "{7C2FB716-8D6B-46AA-8682-570D4E7C62CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +55,14 @@ Global
 		{46F98BFD-6347-47D4-B67D-959E69128E2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{46F98BFD-6347-47D4-B67D-959E69128E2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{46F98BFD-6347-47D4-B67D-959E69128E2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{086B8A53-3756-4321-9EEF-2313415B3F1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{086B8A53-3756-4321-9EEF-2313415B3F1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{086B8A53-3756-4321-9EEF-2313415B3F1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{086B8A53-3756-4321-9EEF-2313415B3F1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C2FB716-8D6B-46AA-8682-570D4E7C62CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C2FB716-8D6B-46AA-8682-570D4E7C62CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C2FB716-8D6B-46AA-8682-570D4E7C62CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C2FB716-8D6B-46AA-8682-570D4E7C62CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
