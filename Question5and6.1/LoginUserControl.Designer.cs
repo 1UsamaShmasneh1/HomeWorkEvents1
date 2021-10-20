@@ -1,6 +1,6 @@
 ﻿namespace Question5and6._1
 {
-    partial class LoginUserControl
+    partial class TotalAmountDepostedButton
     {
         /// <summary> 
         /// Required designer variable.
@@ -33,13 +33,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.UsernameTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LoginButton
             // 
-            this.LoginButton.Location = new System.Drawing.Point(125, 158);
+            this.LoginButton.Location = new System.Drawing.Point(42, 159);
             this.LoginButton.Name = "LoginButton";
-            this.LoginButton.Size = new System.Drawing.Size(91, 31);
+            this.LoginButton.Size = new System.Drawing.Size(141, 31);
             this.LoginButton.TabIndex = 9;
             this.LoginButton.Text = "Login";
             this.LoginButton.UseVisualStyleBackColor = true;
@@ -77,16 +78,27 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "UserName";
             // 
-            // LoginUserControl
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(216, 159);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(141, 31);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Total amount deposited";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // TotalAmountDepostedButton
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.LoginButton);
             this.Controls.Add(this.PasswordTextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.UsernameTextBox);
             this.Controls.Add(this.label1);
-            this.Name = "LoginUserControl";
+            this.Name = "TotalAmountDepostedButton";
             this.Size = new System.Drawing.Size(385, 260);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -100,5 +112,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox UsernameTextBox;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }

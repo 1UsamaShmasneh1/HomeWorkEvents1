@@ -16,14 +16,14 @@ namespace Question5and6._1
         public BankForm()
         {
             InitializeComponent();
-            LoginUserControl loginUserControl= new LoginUserControl();
+            TotalAmountDepostedButton loginUserControl= new TotalAmountDepostedButton();
             AccountUserControl accountUserControl = new AccountUserControl();
             BankFormPanel.Controls.Add(loginUserControl);
             loginUserControl.Dock = DockStyle.Fill;
 
             UsersList.SuccesLogin += user =>
             {
-                loginUserControl = new LoginUserControl();
+                loginUserControl = new TotalAmountDepostedButton();
                 BankFormPanel.Controls.Clear();
                 MessageBox.Show("Welcome " + user.Username + "!");
                 BankFormPanel.Controls.Add(accountUserControl);

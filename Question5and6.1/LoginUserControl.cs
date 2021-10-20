@@ -11,9 +11,9 @@ using Question5and6;
 
 namespace Question5and6._1
 {
-    public partial class LoginUserControl : UserControl
+    public partial class TotalAmountDepostedButton : UserControl
     {
-        public LoginUserControl()
+        public TotalAmountDepostedButton()
         {
             InitializeComponent();
         }
@@ -21,6 +21,11 @@ namespace Question5and6._1
         private void LoginButton_Click(object sender, EventArgs e)
         {
             UsersList.Login(UsernameTextBox.Text, PasswordTextBox.Text);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show($"Total Amount deposited to th bank:  {UsersList.totalAmountDeposited}");
         }
     }
 }

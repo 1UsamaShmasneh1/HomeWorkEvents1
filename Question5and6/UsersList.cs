@@ -23,6 +23,8 @@ namespace Question5and6
             new User(){Username = "usama4", Password = "05074", TotalAmount = 10.25}
         };
 
+        public static int totalAmountDeposited = 0;
+
         public static bool Login(string username, string password)
         {
             foreach (User user in users)
@@ -78,6 +80,7 @@ namespace Question5and6
             else
             {
                 user.TotalAmount += amount;
+                totalAmountDeposited += amount;
             }
             OnRefresh();
         }
