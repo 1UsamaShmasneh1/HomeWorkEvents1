@@ -24,6 +24,11 @@ namespace Question5and6._1
                 TotalLabel.Text = Convert.ToString(user.TotalAmount);
             };
 
+            UsersList.Refresh += () =>
+            {
+                TotalLabel.Text = Convert.ToString(User.TotalAmount);
+            };
+
             UsersList.UnsuccesWithdrawal += withdrawalFailureReasons =>
             {
                 switch (withdrawalFailureReasons)
@@ -56,11 +61,13 @@ namespace Question5and6._1
         private void DepositButton_Click(object sender, EventArgs e)
         {
             UsersList.Deposit(Convert.ToInt32(DepositTextBox.Text), User);
+            DepositTextBox.Text = "";
         }
 
         private void WithdrawalButton_Click(object sender, EventArgs e)
         {
             UsersList.Withdrawal(Convert.ToInt32(WithdrawalTextBox.Text), User);
+            WithdrawalTextBox.Text = "";
         }
     }
 }

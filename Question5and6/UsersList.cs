@@ -13,6 +13,7 @@ namespace Question5and6
         public static event LogOutDelegate LogOutE;
         public static event UnsuccesWithdrawalDelegate UnsuccesWithdrawal;
         public static event UnsuccesDepositDelegate UnsuccesDeposit;
+        public static event RefreshDelegate Refresh;
 
         static List<User> users = new List<User>()
         {
@@ -57,7 +58,7 @@ namespace Question5and6
             {
                 OnUnsuccesWithdrawal(FailedWithdrawalReasonsEnum.WithdrawalAmountMustBeBanknotesOfAHundred);
             }
-            else if(user.TotalAmount !>= amount)
+            else if(user.TotalAmount  < amount)
             {
                 OnUnsuccesWithdrawal(FailedWithdrawalReasonsEnum.NotEnoughAmount);
             }
@@ -65,6 +66,7 @@ namespace Question5and6
             {
                 user.TotalAmount -= amount;
             }
+            OnRefresh();
         }
 
         public static void Deposit(int amount, User user)
@@ -77,6 +79,7 @@ namespace Question5and6
             {
                 user.TotalAmount += amount;
             }
+            OnRefresh();
         }
 
         private static void OnSuccesLogin(User user)
@@ -110,6 +113,12 @@ namespace Question5and6
         {
             if (UnsuccesWithdrawal != null)
                 UnsuccesWithdrawal(failedWithdrawalReason);
+        }
+
+        private static void OnRefresh()
+        {
+            if (Refresh != null)
+                Refresh();
         }
     }
 }

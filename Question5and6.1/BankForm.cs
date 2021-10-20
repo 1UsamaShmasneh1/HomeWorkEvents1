@@ -20,6 +20,7 @@ namespace Question5and6._1
             AccountUserControl accountUserControl = new AccountUserControl();
             BankFormPanel.Controls.Add(loginUserControl);
             loginUserControl.Dock = DockStyle.Fill;
+
             UsersList.SuccesLogin += user =>
             {
                 loginUserControl = new LoginUserControl();
@@ -29,6 +30,7 @@ namespace Question5and6._1
                 accountUserControl.Dock = DockStyle.Fill;
                 User = user;
             };
+
             UsersList.UnsuccesLogin += LoginFailureReasons =>
             {
                 switch (LoginFailureReasons)
@@ -41,14 +43,22 @@ namespace Question5and6._1
                         break;
                 }
             };
+
             UsersList.LogOutE += user1 =>
             {
                 accountUserControl = new AccountUserControl();
                 User = new User();
                 BankFormPanel.Controls.Clear();
-                UsersList.LogOutE += user => MessageBox.Show($"Good by {user.Username}");
+                MessageBox.Show($"Good by {User.Username}");
                 BankFormPanel.Controls.Add(loginUserControl);
                 loginUserControl.Dock = DockStyle.Fill;
+            };
+
+            UsersList.Refresh += () =>
+            {
+                BankFormPanel.Controls.Clear();
+                BankFormPanel.Controls.Add(accountUserControl);
+                accountUserControl.Dock = DockStyle.Fill;
             };
         }
     }
