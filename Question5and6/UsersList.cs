@@ -8,34 +8,108 @@ namespace Question5and6
 {
     public class UsersList
     {
-        public static event SuccessLoginDelegate SuccessLogin;
-        public static event UnsuccessLoginDelegate UnsuccessLogin;
+        public static event SuccessLoginDelegate SuccesLogin;
+        public static event UnsuccessLoginDelegate UnsuccesLogin;
+        public static event LogOutDelegate LogOutE;
+        public static event UnsuccesWithdrawalDelegate UnsuccesWithdrawal;
+        public static event UnsuccesDepositDelegate UnsuccesDeposit;
 
-        static List<User> users = new List<User>();
-        
-        public static void OnLogIn(string username, string password)
+        static List<User> users = new List<User>()
+        {
+            new User(){Username = "usama1", Password = "05071", TotalAmount = 1254.12},
+            new User(){Username = "usama2", Password = "05072", TotalAmount = 125.58},
+            new User(){Username = "usama3", Password = "05073", TotalAmount = 458745.94},
+            new User(){Username = "usama4", Password = "05074", TotalAmount = 10.25}
+        };
+
+        public static bool Login(string username, string password)
         {
             foreach (User user in users)
             {
                 if (username == user.Username)
                 {
-                    if ( password == user.Password)
-                        if (SuccessLogin != null)
-                        {
-                            SuccessLogin(user, "Welcome");
-                            user.isLogin = true;
-                            return;
-                        }
-                        else
-                            if (UnsuccessLogin != null)
-                            {
-                                UnsuccessLogin(null, "Wrong password");
-                                return;
-                            }
+                    if (password == user.Password)
+                    {
+                        user.isLogin = true;
+                        OnSuccesLogin(user);
+                        return true;
+                    }
+                    else
+                    {
+                        OnUnsuccesLogin(FailedLoginReasonsEnum.WrongPassword);
+                        return false;
+                    }
                 }
             }
-            if (UnsuccessLogin != null)
-                UnsuccessLogin(null, "User name does not exist ");
+            OnUnsuccesLogin(FailedLoginReasonsEnum.UserNameDoesNotExist);
+            return false;
+        }
+
+        public static void LogOut(User user)
+        {
+            user.isLogin = false;
+            OnLogOutE(user);
+        }
+
+        public static void Withdrawal(int amount, User user)
+        {
+            if (amount % 100 != 0)
+            {
+                OnUnsuccesWithdrawal(FailedWithdrawalReasonsEnum.WithdrawalAmountMustBeBanknotesOfAHundred);
+            }
+            else if(user.TotalAmount !>= amount)
+            {
+                OnUnsuccesWithdrawal(FailedWithdrawalReasonsEnum.NotEnoughAmount);
+            }
+            else
+            {
+                user.TotalAmount -= amount;
+            }
+        }
+
+        public static void Deposit(int amount, User user)
+        {
+            if (amount % 100 != 0)
+            {
+                OnUnsuccesDeposit(FailedDepositReasonsEnum.DepositAmountMustBeBanknotesOfAHundred);
+            }
+            else
+            {
+                user.TotalAmount += amount;
+            }
+        }
+
+        private static void OnSuccesLogin(User user)
+        {
+            if (SuccesLogin != null)
+            {
+                SuccesLogin(user);
+                user.isLogin = true;
+            }
+        }
+
+        private static void OnUnsuccesLogin(FailedLoginReasonsEnum failedLoginReason)
+        {
+            if (UnsuccesLogin != null)
+                UnsuccesLogin(failedLoginReason);
+        }
+
+        private static void OnLogOutE(User user)
+        {
+            if (LogOutE != null)
+                LogOutE(user);
+        }
+
+        private static void OnUnsuccesDeposit(FailedDepositReasonsEnum failedDepositReason)
+        {
+            if(UnsuccesDeposit != null)
+                UnsuccesDeposit(failedDepositReason);
+        }
+
+        private static void OnUnsuccesWithdrawal(FailedWithdrawalReasonsEnum failedWithdrawalReason)
+        {
+            if (UnsuccesWithdrawal != null)
+                UnsuccesWithdrawal(failedWithdrawalReason);
         }
     }
 }

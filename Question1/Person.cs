@@ -18,10 +18,13 @@ namespace Question1
             {
                 Name = value;
                 OnLongNameEntered();
+                //Lambda method
+                
             }
         }
 
         public event TooLongNameEventDelegat TooLongName;
+
 
         protected void OnLongNameEntered()
         {

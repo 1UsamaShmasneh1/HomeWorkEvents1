@@ -13,5 +13,6 @@ namespace Question5and6
         public bool isLogin = false;
         public string Username {  get; set; }
         public string Password {  get; set; }
+        public double TotalAmount {  get; set; }
     }
 }

@@ -6,5 +6,5 @@ using System.Threading.Tasks;
 
 namespace Question5and6
 {
-    public delegate void UnsuccessLoginDelegate(User user, string str);
+    public delegate void UnsuccessLoginDelegate(FailedLoginReasonsEnum failedLoginReasons);
 }

@@ -6,5 +6,5 @@ using System.Threading.Tasks;
 
 namespace Question5and6
 {
-    public delegate void SuccessLoginDelegate(User user);
+    public delegate void UnsuccesWithdrawalDelegate(FailedWithdrawalReasonsEnum failedWithdrawalReason);
 }

@@ -6,5 +6,8 @@ using System.Threading.Tasks;
 
 namespace Question5and6
 {
-    public delegate void SuccessLoginDelegate(User user);
+    public enum FailedDepositReasonsEnum
+    {
+        DepositAmountMustBeBanknotesOfAHundred
+    }
 }

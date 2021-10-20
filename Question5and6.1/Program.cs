@@ -15,7 +15,7 @@ namespace Question5and6._1
         static void Main()
         {
             ApplicationConfiguration.Initialize();
-            Application.Run(new Form1());
+            Application.Run(new BankForm());
         }
     }
 }
